@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+   let str = "sATy@&*aM sHuKla";
+    
+    let arr = [];
+    document.write(`<h3>Before String: </h3>`);
+    for (i = 0; i < str.length; i++) {
+           document.write(`<b>${str.charAt(i)}<b>`);
+      }
+      document.write(`<br>`);
+
+    for (let i = 0; i < str.length; i++) 
+    {
+      if (str.charAt(i) >= "a" && str.charAt(i) <= "z") 
+                arr[i] =String.fromCharCode((str.charCodeAt(i) - 32));
+       
+      else if (str.charAt(i) >= "A" && str.charAt(i) <= "Z")
+               arr[i] =String.fromCharCode((str.charCodeAt(i) +32));
+      
+    }
+
+    document.write(`<h3>After String:</h3>`);
+    for (i = 0; i < arr.length;i++){
+         if(arr[i] != undefined){
+              document.write(`<b>${arr[i]}<b>`);
+         }
+         else
+              document.write("  ");
+     }
+     
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

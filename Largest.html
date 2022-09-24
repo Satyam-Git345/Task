@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let nums = [2, 3, 4, 5, 6, 107, 8, 9,10,98,45,78,87,23,45,66];
+      let max = 0;
+      let min = nums[0];
+
+      document.write(`<h2>Array Elenent is:</h2>`);
+      for (let i = 0; i < nums.length; i++) {
+        document.write(`<h2>${nums[i]}</h2>`);
+      }
+
+      for (let j = 0; j < nums.length; j++) {
+        if (max <= nums[j]) {
+          max = nums[j];
+        }
+      }
+      document.write(`<h2>Largest Element is: ${max}</h2>`);
+
+      for (let i = 0; i < nums.length; i++) {
+        if (nums[i] < min) {
+          min = nums[i];
+        }
+      }
+      document.write(`<h2>Smallest Element is: ${min}</h2>`);
+
+      document.write(`<h2>Even Numbers in Array:</h2>`);
+
+      for (var i = 0; i < nums.length; i++) {
+            if (nums[i] % 2 == 0) {
+                document.write(`<h2>${nums[i]}</h2>`);
+            }
+        }
+        document.write(`<h2>Odd Numbers in Array:</h2>`);
+        for (var i = 0; i < nums.length; i++) {
+            if (nums[i] % 2 != 0) {
+                document.write(`<h2>${nums[i]}</h2>`);
+            }
+        }
+
+    </script>
+  </body>
+</html>

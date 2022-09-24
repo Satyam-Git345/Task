@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Febonaci Series</title>
+    <style>
+      h2:hover {
+        width: 20000000000px;
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      let n1 = 0,
+        n2 = 1,
+        n3,
+        i;
+       confirm("Hii Satyam Shukla");
+      let count=parseFloat(prompt("Enter The Number Upto Fibonaci Series: ","12"));
+      document.write(`Count is: ${count}`);
+      document.write(`<h2 style="color:red;"}>Febonaci Series upto: ${count} <br></h2>`);
+      document.write(`<h2 style="color:yellow">${n1} <br></h2>`);
+
+      document.write(`<h2 style="color:blue">${n2} <br></h2>`);
+
+      for (i = 2; i <count; i++) {
+        n3 = n1 + n2;
+        document.write(`<h2 style="color:green">${n3} <br></h2>`);
+        n1 = n2;
+        n2 = n3;
+      }
+    </script>
+  </body>
+</html>

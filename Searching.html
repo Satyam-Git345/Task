@@ -1,0 +1,254 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Searching in array using Linear Search
+        
+        let arr=[2,34,65,78,98,1,87,1,98,1,54,23,1,98,1,22,12,1];
+        let temp=0;
+        document.write(`<h2>Array Elements: </h2>`);
+        confirm(`${arr}`) 
+        for (let i=0; i<arr.length; i++)
+           document.write(`<b>${arr[i]}<b>`+" ");
+        
+        let search=parseInt(prompt("Enter The Element To Search in Array"));
+        for (let i = 0; i < arr.length; i++) 
+        {
+               if (arr[i] === search)
+               {
+                    // document.write(`<h2>Element ${search} Found  Index At ${i+1}</h2>`);
+                    temp++;
+                    break;
+               }
+        }
+        if (temp>0)
+             document.write(`<h2>Element ${search} Found in total ${temp} places!!!</h2>`);
+        else
+             document.write(`<h2>Array Element not Found!!!</h2>`);
+
+    </script>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Weather App JavaScript</title>
+        <link rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet" href="style.css" type="text/css">
+       <style>
+        
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap");
+body {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  background-image: radial-gradient(
+    circle,
+    rgba(5, 8, 114, 1),
+    rgba(7, 3, 53, 1)
+  );
+  color: #defaf9;
+  font-family: "Gowun Dodum", sans-serif;
+  font-size: 22px;
+}
+
+.weather {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.weather_search {
+  width: 100%;
+  padding: 15px 10px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.15);
+  font-size: 20px;
+  color: inherit;
+  margin-bottom: 20px;
+}
+
+input::placeholder {
+  color: #fff;
+}
+
+.weather_today {
+  display: flex;
+  justify-content: space-between;
+}
+
+.weather_image {
+  width: 210px;
+  align-self: center;
+}
+
+.weather_city {
+  font-size: 36px;
+  font-weight: 600;
+  margin: 20px 0;
+}
+.weather_day {
+  font-size: 30px;
+  margin: 10px 0;
+  font-weight: 400;
+}
+
+.weather_indicator::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+  margin-right: 10px;
+}
+
+.weather_indicator--humidity::before {
+  background-image: url(../images/humidity.png);
+}
+
+.weather_indicator--wind::before {
+  background-image: url(../images/wind.png);
+}
+
+.weather_indicator--pressure::before {
+  background-image: url(../images/pressure.png);
+}
+
+.weather_temperature {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.weather_forecast {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.weather_forecast_icon {
+  max-width: 50%;
+}
+
+.weather_forecast_item {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  margin: 0 10px 10px;
+  padding: 30px 5px 20px;
+  width: 300px;
+}
+
+
+       </style>
+    </head>
+
+    <body>
+        <div class="weather">
+            <input
+                type="search"
+                list="suggestions"
+                class="weather_search"
+                placeholder="Enter City Name"
+                />
+            <datalist id="suggestions"></datalist>
+
+            <div class="weather_today">
+                <div class="weather_details">
+                    <h2 class="weather_city">City</h2>
+                    <p class="weather_day">Day</p>
+                    <div class="weather_current">
+                        <p class="weather_indicator weather_indicator--humidity">
+                            <span class="value" id="humidity">50</span>%
+                        </p>
+                        <p class="weather_indicator weather_indicator--wind">
+                            <span class="value">West, 5</span>m/s
+                        </p>
+                        <p class="weather_indicator weather_indicator--pressure">
+                            <span class="value" id="pressure">1050</span>hPa
+                        </p>
+                    </div>
+                </div>
+                <img src="images/clear-sky.png" alt="Clear sky" class="weather_image" />
+                <div class="weather_temperature">
+                    <span class="value">+25</span> &deg;C
+                </div>
+            </div>
+
+            <div class="weather_forecast">
+                <article class="weather_forecast_item">
+                    <img
+                        src="images/clear-sky.png"
+                        alt="Clear sky"
+                        class="weather_forecast_icon"
+                        />
+                    <h3 class="weather_forecast_day">Day</h3>
+                    <p class="weather_forecast_temperature">
+                        <span class="value">+25</span> &deg;C
+                    </p>
+                </article>
+
+                <article class="weather_forecast_item">
+                    <img
+                        src="images/clear-sky.png"
+                        alt="Clear sky"
+                        class="weather_forecast_icon"
+                        />
+                    <h3 class="weather_forecast_day">Day</h3>
+                    <p class="weather_forecast_temperature">
+                        <span class="value">+25</span> &deg;C
+                    </p>
+                </article>
+
+                <article class="weather_forecast_item">
+                    <img
+                        src="images/clear-sky.png"
+                        alt="Clear sky"
+                        class="weather_forecast_icon"
+                        />
+                    <h3 class="weather_forecast_day">Day</h3>
+                    <p class="weather_forecast_temperature">
+                        <span class="value">+25</span> &deg;C
+                    </p>
+                </article>
+
+                <article class="weather_forecast_item">
+                    <img
+                        src="images/clear-sky.png"
+                        alt="Clear sky"
+                        class="weather_forecast_icon"
+                        />
+                    <h3 class="weather_forecast_day">Day</h3>
+                    <p class="weather_forecast_temperature">
+                        <span class="value">+25</span> &deg;C
+                    </p>
+                </article>
+
+                <article class="weather_forecast_item">
+                    <img
+                        src="images/clear-sky.png"
+                        alt="Clear sky"
+                        class="weather_forecast_icon"
+                        />
+                    <h3 class="weather_forecast_day">Day</h3>
+                    <p class="weather_forecast_temperature">
+                        <span class="value">+25</span> &deg;C
+                    </p>
+                </article>
+            </div>
+        </div>
+    </body>
+    <script src="script.js"></script>
+</html>

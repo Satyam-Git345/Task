@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n=54;
+
+
+        function greet(name,Callback) {
+            document.write(`<h3>Welcome To Our Program ${name}</h3>`);   
+            let a=Callback(13);
+            
+            document.write(`<h3>${a}</h3>`);
+            document.write(`<h3> ${Callback(48)}</h3>`);   
+        }
+
+        greet("Satyam",function(num) 
+        { 
+            if(num%2===0)
+              return "Even Number";
+                 return "Odd Number";     
+        });
+
+   </script>
+</body>
+</html>

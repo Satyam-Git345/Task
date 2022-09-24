@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Searching in array using Linear Search
+        
+        let arr=[1,2,3,4,5,6,7,8,9,10];
+        let temp=0;
+        let search =5;
+        document.write(`<h2>Array Elements: </h2>`);
+        confirm(`${arr}`) 
+        for (let i=0; i<arr.length; i++)
+           document.write(`<b>${arr[i]}<b>`+" ");
+       
+        let lower=0;
+        let high=arr[arr.length-1];
+        let mid=0;       
+        
+        for (let i=0; i<arr.length; i++)
+        {
+            mid=parseInt(lower+high/2);
+
+              if(arr[i]==mid)
+                  document.write(`<h2>${search} Found at index ${i+1}</h2>`);
+             
+              else if(search>arr[mid])
+                  lower=mid+1;
+
+              else
+                  high=mid-1;
+
+        }
+
+
+
+
+
+
+        // let search=parseInt(prompt("Enter The Element To Search in Array"));
+        // for (let i = 0; i < arr.length; i++) 
+        // {
+        //        if (arr[i] === search)
+        //        {
+        //             // document.write(`<h2>Element ${search} Found  Index At ${i+1}</h2>`);
+        //             temp++;
+        //             break;
+        //        }
+        // }
+        // if (temp>0)
+        //      document.write(`<h2>Element ${search} Found in total ${temp} places!!!</h2>`);
+        // else
+        //      document.write(`<h2>Array Element not Found!!!</h2>`);
+
+    </script>
+</body>
+</html>
